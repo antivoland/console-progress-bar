@@ -1,4 +1,4 @@
-package ru.creditnet.progressbar;
+package io.github.antivoland.cpb;
 
 import org.junit.Test;
 

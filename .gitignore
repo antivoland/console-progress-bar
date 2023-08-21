@@ -1,4 +1,6 @@
+# Maven
 target
-data
+
+# IDEA
 .idea
 *.iml

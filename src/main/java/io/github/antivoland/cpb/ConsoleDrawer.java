@@ -1,4 +1,4 @@
-package ru.creditnet.progressbar;
+package io.github.antivoland.cpb;
 
 import java.io.Closeable;
 import java.io.IOException;

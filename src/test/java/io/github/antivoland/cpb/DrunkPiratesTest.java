@@ -1,4 +1,4 @@
-package ru.creditnet.progressbar;
+package io.github.antivoland.cpb;
 
 import org.junit.AfterClass;
 import org.junit.Assert;
@@ -13,7 +13,7 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.stream.Stream;
 
-import static ru.creditnet.progressbar.ConsoleProgressBar.DEFAULT_TICK_MILLIS;
+import static io.github.antivoland.cpb.ConsoleProgressBar.DEFAULT_TICK_MILLIS;
 
 /**
  * @author antivoland

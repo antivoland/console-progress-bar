@@ -8,9 +8,9 @@ The simplest console-based progress bar with non-blocking interface for Java.
 
 ```xml
 <dependency>
-    <groupId>ru.creditnet</groupId>
+    <groupId>io.github.antivoland</groupId>
     <artifactId>console-progress-bar</artifactId>
-    <version>1.0.0</version>
+    <version>1.1.0-SNAPSHOT</version>
 </dependency>
 ```
 

@@ -4,51 +4,45 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>ru.creditnet</groupId>
+    <groupId>io.github.antivoland</groupId>
     <artifactId>console-progress-bar</artifactId>
-    <version>1.0.0</version>
+    <version>1.1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
     <name>Console progress bar</name>
     <description>The simplest console-based progress bar for Java</description>
+    <inceptionYear>2017</inceptionYear>
     <url>http://github.com/creditnet/console-progress-bar</url>
 
-    <organization>
-        <name>National Credit Bureau</name>
-        <url>http://creditnet.ru</url>
-    </organization>
-
-    <inceptionYear>2017</inceptionYear>
+    <developers>
+        <developer>
+            <id>antivoland</id>
+            <name>Vladimir Pavlovskii</name>
+            <url>https://github.com/antivoland</url>
+        </developer>
+    </developers>
 
     <licenses>
         <license>
             <name>MIT</name>
-            <url>http://opensource.org/licenses/MIT</url>
+            <url>https://opensource.org/license/MIT</url>
             <distribution>repo</distribution>
         </license>
     </licenses>
 
     <scm>
-        <connection>scm:git:git://github.com/creditnet/console-progress-bar.git</connection>
-        <developerConnection>scm:git:ssh://github.com:creditnet/console-progress-bar.git</developerConnection>
-        <url>http://github.com/creditnet/console-progress-bar</url>
+        <connection>scm:git:git://github.com/antivoland/console-progress-bar.git</connection>
+        <developerConnection>scm:git:git://github.com/antivoland/console-progress-bar.git</developerConnection>
+        <url>https://github.com/antivoland/console-progress-bar</url>
     </scm>
-
-    <developers>
-        <developer>
-            <id>antivoland</id>
-            <name>Vladimir Pavlovski</name>
-            <url>https://github.com/antivoland</url>
-        </developer>
-    </developers>
 
     <distributionManagement>
         <snapshotRepository>
             <id>ossrh</id>
-            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+            <url>https://s01.oss.sonatype.org/content/repositories/snapshots</url>
         </snapshotRepository>
         <repository>
             <id>ossrh</id>
-            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+            <url>https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/</url>
         </repository>
     </distributionManagement>
 

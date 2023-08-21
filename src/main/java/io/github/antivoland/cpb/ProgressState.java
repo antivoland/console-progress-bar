@@ -1,4 +1,4 @@
-package ru.creditnet.progressbar;
+package io.github.antivoland.cpb;
 
 import java.time.Duration;
 import java.time.LocalDateTime;
