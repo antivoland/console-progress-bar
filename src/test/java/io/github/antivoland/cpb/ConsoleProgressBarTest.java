@@ -1,33 +1,41 @@
 package io.github.antivoland.cpb;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 
-/**
- * @author antivoland
- */
+import static org.assertj.core.api.Assertions.assertThatThrownBy;
+
+@SuppressWarnings("resource")
 public class ConsoleProgressBarTest {
     private static final PrintStream DUMMY = new PrintStream(new ByteArrayOutputStream());
 
-    @Test(expected = IllegalArgumentException.class)
+    @Test
     public void testInvalidMax() {
-        new ConsoleProgressBar(-1, DUMMY, 1);
+        assertThatThrownBy(() -> new ConsoleProgressBar(-1, DUMMY, 1))
+                .isInstanceOf(IllegalArgumentException.class)
+                .hasMessage("Max value must be non-negative");
     }
 
-    @Test(expected = NullPointerException.class)
+    @Test
     public void testNullStream() {
-        new ConsoleProgressBar(0, null, 1);
+        assertThatThrownBy(() -> new ConsoleProgressBar(0, null, 1))
+                .isInstanceOf(NullPointerException.class)
+                .hasMessage("Stream must not be null");
     }
 
-    @Test(expected = IllegalArgumentException.class)
+    @Test
     public void testInvalidTickMillis() {
-        new ConsoleProgressBar(0, DUMMY, 0);
+        assertThatThrownBy(() -> new ConsoleProgressBar(0, DUMMY, 0))
+                .isInstanceOf(IllegalArgumentException.class)
+                .hasMessage("Tick millis must be positive");
     }
 
-    @Test(expected = IllegalArgumentException.class)
+    @Test
     public void testInvalidStepDelta() {
-        new ConsoleProgressBar(0, DUMMY, 1).stepBy(-1);
+        assertThatThrownBy(() -> new ConsoleProgressBar(0, DUMMY, 1).stepBy(-1))
+                .isInstanceOf(IllegalArgumentException.class)
+                .hasMessage("Delta must be non-negative");
     }
 }

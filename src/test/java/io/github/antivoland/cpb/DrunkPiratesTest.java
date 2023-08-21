@@ -1,10 +1,7 @@
 package io.github.antivoland.cpb;
 
-import org.junit.AfterClass;
-import org.junit.Assert;
-import org.junit.Test;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.Test;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
@@ -14,16 +11,13 @@ import java.util.concurrent.Executors;
 import java.util.stream.Stream;
 
 import static io.github.antivoland.cpb.ConsoleProgressBar.DEFAULT_TICK_MILLIS;
+import static org.assertj.core.api.Assertions.assertThat;
 
-/**
- * @author antivoland
- */
 public class DrunkPiratesTest {
-    private static final Logger LOG = LoggerFactory.getLogger(DrunkPiratesTest.class);
     private static final int PIRATES = 999;
     private static final ExecutorService THREAD_POOL = Executors.newFixedThreadPool(PIRATES);
 
-    @AfterClass
+    @AfterAll
     public static void destroy() {
         THREAD_POOL.shutdownNow();
     }
@@ -61,9 +55,8 @@ public class DrunkPiratesTest {
         String expectedAbsoluteRatio = ConsoleDrawer.ABSOLUTE_RATIO_FORMAT.apply(expected.max(), expected.current());
 
         String actual = buffer.toString();
-        Assert.assertTrue(actual.contains(expectedPercentage));
-        Assert.assertTrue(actual.contains(expectedAbsoluteRatio));
-        LOG.info(String.format("%s bottles of beer on the wall, %s bottles of beer were drunk", expected.max() - expected.current(), expectedPercentage.trim()));
+        assertThat(actual).contains(expectedPercentage);
+        assertThat(actual).contains(expectedAbsoluteRatio);
     }
 
     private Runnable drink(CountDownLatch start, CountDownLatch finish, ConsoleProgressBar bar) {

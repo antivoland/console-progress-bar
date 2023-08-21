@@ -1,15 +1,11 @@
 package io.github.antivoland.cpb;
 
 import java.io.Closeable;
-import java.io.IOException;
 import java.io.PrintStream;
 import java.time.Duration;
 import java.util.function.BiFunction;
 import java.util.function.Function;
 
-/**
- * @author antivoland
- */
 class ConsoleDrawer implements Closeable {
     static final BiFunction<Long, Long, String> PERCENTAGE_FORMAT = (max, current) -> {
         if (max <= 0) return "    ";
@@ -44,7 +40,7 @@ class ConsoleDrawer implements Closeable {
     }
 
     @Override
-    public void close() throws IOException {
+    public void close() {
         stream.print('\n');
     }
 }

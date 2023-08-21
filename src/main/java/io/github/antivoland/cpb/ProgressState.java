@@ -4,9 +4,6 @@ import java.time.Duration;
 import java.time.LocalDateTime;
 import java.util.concurrent.atomic.AtomicLong;
 
-/**
- * @author antivoland
- */
 class ProgressState {
     private final long max;
     private final AtomicLong current = new AtomicLong();

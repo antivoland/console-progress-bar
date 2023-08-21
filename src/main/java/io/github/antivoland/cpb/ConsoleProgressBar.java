@@ -6,8 +6,6 @@ import java.io.PrintStream;
 
 /**
  * The simplest console-based progress bar.
- *
- * @author antivoland
  */
 public class ConsoleProgressBar implements Closeable {
     static final long DEFAULT_TICK_MILLIS = 1000;
@@ -77,11 +75,9 @@ public class ConsoleProgressBar implements Closeable {
 
     /**
      * Stops the progress bar.
-     *
-     * @throws IOException if an I/O error occurs
      */
     @Override
-    public void close() throws IOException {
+    public void close() {
         worker.interrupt();
         try {
             worker.join();
