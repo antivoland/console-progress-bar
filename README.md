@@ -4,7 +4,9 @@ The simplest console-based progress bar with non-blocking interface for Java.
 
 ![Animated preview](bar.gif)
 
-## Maven
+## Installation
+
+Use the following Maven dependency:
 
 ```xml
 <dependency>
@@ -12,6 +14,17 @@ The simplest console-based progress bar with non-blocking interface for Java.
     <artifactId>console-progress-bar</artifactId>
     <version>1.1.0-SNAPSHOT</version>
 </dependency>
+```
+
+Currently only snapshots are available, so you will need to add the repository to your project as follows:
+
+```xml
+<repositories>
+    <repository>
+        <id>ossrh</id>
+        <url>https://s01.oss.sonatype.org/content/repositories/snapshots</url>
+    </repository>
+</repositories>
 ```
 
 ## Usage
