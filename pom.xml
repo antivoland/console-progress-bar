@@ -30,7 +30,7 @@
     <scm>
         <connection>scm:git:git://github.com/antivoland/console-progress-bar.git</connection>
         <developerConnection>scm:git:git://github.com/antivoland/console-progress-bar.git</developerConnection>
-        <url>https://github.com/antivoland/console-progress-bar</url>
+        <url>https://github.com/antivoland/console-progress-bar.git</url>
     </scm>
 
     <distributionManagement>
