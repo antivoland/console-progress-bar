@@ -1,5 +1,7 @@
 # Console progress bar
 
+[![build](https://github.com/antivoland/console-progress-bar/workflows/build/badge.svg)](https://github.com/antivoland/console-progress-bar/actions/workflows/build.yaml)
+
 The simplest console-based progress bar with non-blocking interface for Java.
 
 ![Animated preview](bar.gif)

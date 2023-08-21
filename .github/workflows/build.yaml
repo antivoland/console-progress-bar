@@ -18,6 +18,10 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
           cache: maven
+          gpg-private-key: ${{ secrets.GPG_PRIVATE_KEY }}
+          gpg-passphrase: GPG_PASSPHRASE
 
-      - name: Build with Maven
+      - name: Build and verify with Maven
         run: mvn -B verify
+        env:
+          GPG_PASSPHRASE: ${{ secrets.GPG_PASSPHRASE }}
