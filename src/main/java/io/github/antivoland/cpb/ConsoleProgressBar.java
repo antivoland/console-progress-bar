@@ -1,13 +1,11 @@
 package io.github.antivoland.cpb;
 
-import java.io.Closeable;
-import java.io.IOException;
 import java.io.PrintStream;
 
 /**
  * The simplest console-based progress bar.
  */
-public class ConsoleProgressBar implements Closeable {
+public class ConsoleProgressBar implements  AutoCloseable {
     static final long DEFAULT_TICK_MILLIS = 1000;
 
     private final ProgressState state;
